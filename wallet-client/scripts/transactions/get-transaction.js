@@ -21,9 +21,9 @@ async function getTransactions(){
       }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
     const transactionsTableBody = document.getElementById("transactions-body");
-    const transactions = getTransactions();
+    const transactions = await getTransactions();
     let html = "";
     for(i = 0; i < transactions.length; i++)
     {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${transactions[i].amount}</td>
         <td>${transactions[i].description}</td>
         <td>${transactions[i].createdat}</td>
-        <td>${transactions[i].updated}</td>
+        <td>${transactions[i].updatedat}</td>
         </tr>`;
     }
     transactionsTableBody.innerHTML = html;
