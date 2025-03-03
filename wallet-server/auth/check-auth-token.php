@@ -11,6 +11,7 @@ function checkAuthToken() {
     $secret_key = $config['jwt_secret'];
 
     $headers = apache_request_headers();
+   
 
     if (!isset($headers['Authorization'])) {
         return ['error' => 'Auth token is missing'];
@@ -19,7 +20,7 @@ function checkAuthToken() {
     $authorization = $headers['Authorization'];
     $headerValue = explode(' ', $authorization);
     
-    if (count($headerValue) < 2) {
+    if (count($headerValue) !== 2) {
         return ['error' => 'Invalid authorization header format'];
     }
 
