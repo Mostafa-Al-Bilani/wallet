@@ -68,11 +68,40 @@
               <th>description</th>
               <th>createdat</th>
               <th>updatedat</th>
-              <th>actions</th>
             </tr>
           </thead>
           <tbody id="transactions-body"></tbody>
         </table>
+        <div class="flex center gap10">
+          <button class="filled-btn open-modal" id="open-withdraw">
+            withdraw
+          </button>
+          <button class="filled-btn open-modal" id="open-deposit">
+            deposit
+          </button>
+          <button class="filled-btn open-modal" id="open-payment">
+            send payment
+          </button>
+          <!-----------------------------------------withdraw modal------------------------------  -->
+          <div id="modal-withdraw" class="modal">
+            <div class="box-modal">
+              <button class="close-modal">X</button>
+              <form class="flex column gap10 full-width" id="loginForm">
+                <div >
+                  <input type="number" id="amount" placeholder="enter amount" required/>
+                </div>
+                <div><input type="text" id="description" placeholder="description" required/></div>
+                <button class="filled-btn">withdraw</button>
+              </div>
+            </div>
+              </form>
+            </div>
+          </div>
+           <!-----------------------------------------deposit modal------------------------------  -->
+           <div id="modal-deposit" class="modal"></div>
+          <!-----------------------------------------payment modal------------------------------  -->
+          <div id="modal-payment" class="modal"></div> 
+        </div>
       </div>
       <div class="page hidden" id="page-QR">QR</div>
       <div class="page hidden" id="page-profile">profile</div>
@@ -80,6 +109,7 @@
     </div>
     <script src="./scripts/auth-route.js"></script>
     <script src="./scripts/navigate.js"></script>
+    <script src="./scripts/modal.js"></script>
     <script src="./scripts/axios.min.js"></script>
     <script src="./scripts/transactions/get-transaction.js"></script>
   </body>
