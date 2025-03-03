@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/style.css" rel="stylesheet" />
+    <title>Wallet App</title>
+  </head>
+  <body>
+    <nav
+      class="w-nav fixed left-0 top-0 height-screen overflow-y-auto bg-gray flex column gap5"
+    >
+      <li>
+        <button class="navigate clicked" id="dashboard">Dashboard</button>
+      </li>
+      <li>
+        <button class="navigate" id="transactions">Transactions</button>
+      </li>
+      <li>
+        <button class="navigate" id="QR">QR</button>
+      </li>
+      <li>
+        <button class="navigate" id="profile">Profile</button>
+      </li>
+      <li>
+        <button class="navigate" id="help">Help Center</button>
+      </li>
+    </nav>
+    <div class="content bg-black">
+      <div class="page" id="page-dashboard">
+        <div class="flex column gap20">
+          <h2>Dashboard</h2>
+          <div class="flex column gap10">
+            <h1>Welcome Client</h1>
+            <div class="flex column">
+              <div class="flex gap10 wrap">
+                <div class="box">
+                  <h2>Balance</h2>
+                  <img src="./assets/balance.png" />
+                  <h3>10000 $</h3>
+                </div>
+                <div class="box">
+                  <h2>Deposit</h2>
+                  <img src="./assets/deposit.png" />
+                  <h3>10000 $</h3>
+                </div>
+                <div class="box">
+                  <h2>Total withdraws</h2>
+                  <img src="./assets/withdraw.png" />
+                  <h3>10000 $</h3>
+                </div>
+                <div class="box">
+                  <h2>Total transactions</h2>
+                  <img src="./assets/transaction.png" />
+                  <h3>10000 $</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table></table>
+        </div>
+      </div>
+      <div class="page hidden" id="page-transactions">transactions</div>
+      <div class="page hidden" id="page-QR">QR</div>
+      <div class="page hidden" id="page-profile">profile</div>
+      <div class="page hidden" id="page-help">help</div>
+    </div>
+    <script src="./scripts/auth-route.js"></script>
+    <script src="./scripts/navigate.js"></script>
+    
+  </body>
+</html>

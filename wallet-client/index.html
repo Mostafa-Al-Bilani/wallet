@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/style.css" rel="stylesheet" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="flex gap10 column width-full height-screen center wrapper">
+      <div class="flex column gap20 center full-width max-width-300 ">
+        <h1>login</h1>
+        <form class="flex column gap10 full-width" id="loginForm">
+          <div >
+            <input type="email" id="email" placeholder="Enter your email" required/>
+          </div>
+          <div><input type="password" id="password" placeholder="Enter your password" required/></div>
+          <button class="filled-btn">Login</button>
+        </div>
+        <div>
+          <p class="text-lg">Don't have an account</p>
+          <a href="./signup.html" class="text-btn text-center">create an acoount</a>
+        </div>
+      </div>
+        </form>
+        <script src="./scripts/not-auth-route.js"></script>
+        <script src="./scripts/axios.min.js"></script>
+        <script src="./scripts/login.js"></script>
+  </body>
+</html>

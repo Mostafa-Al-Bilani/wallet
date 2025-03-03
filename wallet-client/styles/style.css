@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* inputs */
+input {
+  outline: 0;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #7b7a8c;
+  width: 100%;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+/*  links */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* wrappers */
+.wrapper{
+  width: 100%;
+  padding: 0 30px;
+}
+
+
+
+/* displays */
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+.gap5{
+  gap: 5px;
+}
+.gap10 {
+    gap: 10px;
+}
+.gap20 {
+    gap: 20px;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* positions */
+.fixed{
+  position: fixed;
+}
+
+/* width */
+.full-width {
+  width: 100%;
+}
+
+.max-width-300{
+  max-width: 300px;
+}
+
+.max-width-1000{
+  max-width: 1000px;
+}
+
+/* height */
+.height-screen {
+  height: 100vh;
+}
+
+.full-height {
+  height: 100%;
+}
+
+
+/* Buttons */
+.filled-btn {
+  background-color: #0d0c22;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.filled-btn:hover {
+  opacity: 0.7;
+}
+
+.text-btn {
+  background-color: transparent;
+  color: #0d0c22;
+  font-weight: bold;
+  transition: all 0.3s;
+  display: block;
+}
+
+.text-btn:hover {
+  opacity: 0.7;
+}
+
+/* texts */
+.text-lg{
+  font-size: 18px;
+}
+.text-center{
+  text-align: center;
+}
+
+/* margin */
+.auto{
+  margin: auto;
+}
+
+/* overflow */
+.overflow-y-auto{
+  overflow-y: auto;
+}
+
+/* nav style */
+.w-nav{
+  width: 200px;
+  padding: 20px;
+}
+
+nav li{
+  list-style: none;
+  width: 70%;
+}
+nav li button{
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 10px 5px;
+  font-weight: bold;
+  transition: all 0.1s;
+  width: 100%;
+  text-align: left;
+}
+
+nav li button:hover, nav li button.clicked {
+  background-color: black;
+  color: white;
+}
+
+/* content style */
+.content{
+  width: calc(100% - 200px);
+  margin-left: auto;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  color:black
+
+}
+.page.hidden{
+  display: none;
+}
+/* colors */
+.bg-gray{
+  background-color: #7b7a8c;
+}
+.bg-black{
+  background-color:white;
+}
+
+/* boxes */
+.box{
+  flex: 1;
+  border-radius: 20px;
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  color: white;
+}
+.box img{
+  width: 80px;
+}
+
+/* testing */
+.bg-red{
+  background-color: red;
+}
+
+.bg-yellow{
+  background-color: yellow;
+}
