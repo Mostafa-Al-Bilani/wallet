@@ -41,11 +41,13 @@ class Transaction
         $query->execute();
         $array = $query->get_result();
         $response = [];
-        while ($user = $array->fetch_assoc()) {
-            $response[] = $user;
+        while ($transaction = $array->fetch_assoc()) {
+            $response[] = $transaction;
         }
-
-        echo json_encode($response);
+        return json_encode([
+            "status" => "success",
+            "transactions" => $response 
+        ]);
     }
 
     function update($mysqli, $id)

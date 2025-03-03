@@ -60,13 +60,27 @@
           <table></table>
         </div>
       </div>
-      <div class="page hidden" id="page-transactions">transactions</div>
+      <div class="page hidden" id="page-transactions">
+        <table id="transactions-table">
+          <thead>
+            <tr>
+              <th>amount</th>
+              <th>description</th>
+              <th>createdat</th>
+              <th>updatedat</th>
+              <th>actions</th>
+            </tr>
+          </thead>
+          <tbody id="transactions-body"></tbody>
+        </table>
+      </div>
       <div class="page hidden" id="page-QR">QR</div>
       <div class="page hidden" id="page-profile">profile</div>
       <div class="page hidden" id="page-help">help</div>
     </div>
     <script src="./scripts/auth-route.js"></script>
     <script src="./scripts/navigate.js"></script>
-    
+    <script src="./scripts/axios.min.js"></script>
+    <script src="./scripts/transactions/get-transaction.js"></script>
   </body>
 </html>
