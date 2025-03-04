@@ -1,9 +1,15 @@
 async function getTransactions() {
+  const token = localStorage.getItem("token");
   try {
     // Send request with Axios
     const response = await axios.get(
       "http://localhost/wallet/wallet-server/user/v1/get-transactions.php",
-      { headers: { "Content-Type": "application/json" } }
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
     );
 
     if (response.data.status === "success") {
@@ -29,7 +35,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         <td>${transactions[i].amount}</td>
         <td>${transactions[i].description}</td>
         <td>${transactions[i].createdat}</td>
-        <td>${transactions[i].updatedat}</td>
         </tr>`;
   }
   transactionsTableBody.innerHTML = html;

@@ -11,8 +11,9 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
     
 
     $transaction = new Transaction();
-    $authArray = checkAuthToken();
+    $authArray = checkAuthToken();  
     $userid = $authArray['user_id'];
+
 
     $response = $transaction->select($mysqli, $userid);
     echo $response;
