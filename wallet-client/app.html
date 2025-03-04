@@ -82,23 +82,32 @@
           <button class="filled-btn open-modal" id="open-payment">
             send payment
           </button>
+        </div>
           <!-----------------------------------------withdraw modal------------------------------  -->
           <div id="modal-withdraw" class="modal">
             <div class="box-modal">
               <button class="close-modal">X</button>
-              <form class="flex column gap10 full-width" id="loginForm">
+              <form class="flex column gap10 full-width" id="withdrawForm">
                 <div >
-                  <input type="number" id="amount" placeholder="enter amount" required/>
+                  <input type="number" id="withdraw-amount" placeholder="enter amount" required/>
                 </div>
-                <div><input type="text" id="description" placeholder="description" required/></div>
                 <button class="filled-btn">withdraw</button>
-              </div>
-            </div>
               </form>
+              </div>
             </div>
           </div>
            <!-----------------------------------------deposit modal------------------------------  -->
-           <div id="modal-deposit" class="modal"></div>
+           <div id="modal-deposit" class="modal">
+            <div class="box-modal">
+              <button class="close-modal">X</button>
+              <form class="flex column gap10 full-width" id="depositForm">
+                <div >
+                  <input type="number" id="deposite-amount" placeholder="enter amount" required/>
+                </div>
+                <button class="filled-btn">deposit</button>
+                </form> 
+              </div>
+           </div>
           <!-----------------------------------------payment modal------------------------------  -->
           <div id="modal-payment" class="modal"></div> 
         </div>
@@ -112,5 +121,6 @@
     <script src="./scripts/modal.js"></script>
     <script src="./scripts/axios.min.js"></script>
     <script src="./scripts/transactions/get-transaction.js"></script>
+    <script src="./scripts/transactions/deposit.js"></script>
   </body>
 </html>
