@@ -151,6 +151,17 @@ a {
   opacity: 0.7;
 }
 
+.logout{
+  margin-left: auto;
+  display: block;
+  background-color: red;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
 /* texts */
 .text-lg{
   font-size: 18px;

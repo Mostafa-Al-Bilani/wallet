@@ -27,6 +27,7 @@
       </li>
     </nav>
     <div class="content bg-black">
+      <button class="logout" id="logout">logout</button>
       <div class="page" id="page-dashboard">
         <div class="flex column gap20">
           <h2>Dashboard</h2>
@@ -82,29 +83,52 @@
           <button class="filled-btn open-modal" id="open-payment">
             send payment
           </button>
+        </div>
           <!-----------------------------------------withdraw modal------------------------------  -->
           <div id="modal-withdraw" class="modal">
             <div class="box-modal">
               <button class="close-modal">X</button>
-              <form class="flex column gap10 full-width" id="loginForm">
+              <form class="flex column gap10 full-width" id="withdrawForm">
                 <div >
-                  <input type="number" id="amount" placeholder="enter amount" required/>
+                  <input type="number" id="withdraw-amount" placeholder="enter amount" required/>
                 </div>
-                <div><input type="text" id="description" placeholder="description" required/></div>
                 <button class="filled-btn">withdraw</button>
-              </div>
-            </div>
               </form>
+              </div>
             </div>
           </div>
            <!-----------------------------------------deposit modal------------------------------  -->
-           <div id="modal-deposit" class="modal"></div>
+           <div id="modal-deposit" class="modal">
+            <div class="box-modal">
+              <button class="close-modal">X</button>
+              <form class="flex column gap10 full-width" id="depositForm">
+                <div >
+                  <input type="number" id="deposite-amount" placeholder="enter amount" required/>
+                </div>
+                <button class="filled-btn">deposit</button>
+                </form> 
+              </div>
+           </div>
           <!-----------------------------------------payment modal------------------------------  -->
           <div id="modal-payment" class="modal"></div> 
-        </div>
-      </div>
       <div class="page hidden" id="page-QR">QR</div>
-      <div class="page hidden" id="page-profile">profile</div>
+      <div class="page hidden" id="page-profile">
+        <form class="flex column gap10 full-width" id="profileForm">
+          <div>
+              <input type="text" placeholder="Enter your name" id="name" required />
+            </div>
+            <div>
+              <input type="email" placeholder="Enter your email" id="email" required />
+            </div>
+        <div>
+          <input type="text" placeholder="Enter your phone" id="phoneNumber" required/>
+        </div>
+        <div>
+          <input type="date" placeholder="Enter your date of birth" id="dob" required />
+        </div>
+        <button class="filled-btn">update</button>
+      </form>
+      </div>
       <div class="page hidden" id="page-help">help</div>
     </div>
     <script src="./scripts/auth-route.js"></script>
@@ -112,5 +136,9 @@
     <script src="./scripts/modal.js"></script>
     <script src="./scripts/axios.min.js"></script>
     <script src="./scripts/transactions/get-transaction.js"></script>
+    <script src="./scripts/transactions/deposit.js"></script>
+    <script src="./scripts/transactions/withdraw.js"></script>
+    <script src="./scripts/logout.js"></script>
+    <script src="./scripts/update-form.js"></script>
   </body>
 </html>
