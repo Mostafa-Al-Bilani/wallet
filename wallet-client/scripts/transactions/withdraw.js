@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <td>${amount}</td>
           <td>withdraw</td>
           <td>${formattedTime}</td>
-          <td>${formattedTime}</td>
           </tr>`;
           document.getElementById("transactions-body").innerHTML += html;
           document.getElementById("modal-withdraw").classList.remove("active");
