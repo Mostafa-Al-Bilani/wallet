@@ -35,9 +35,10 @@ class Transaction
             ]);
         }
     }
-    function select($mysqli)
+    function select($mysqli, $id)
     {
-        $query = $mysqli->prepare("SELECT * FROM $this->table");
+        $query = $mysqli->prepare("SELECT * FROM $this->table where id = ?");
+        $query->bind_param("i",  $id);
         $query->execute();
         $array = $query->get_result();
         $response = [];
