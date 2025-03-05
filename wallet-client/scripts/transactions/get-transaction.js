@@ -3,7 +3,7 @@ async function getTransactions() {
   try {
     // Send request with Axios
     const response = await axios.get(
-      "http://localhost/wallet/wallet-server/user/v1/get-transactions.php",
+      `${backendUrl}/get-transactions.php"`,
       {
         headers: {
           "Content-Type": "application/json",

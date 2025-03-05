@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       // Send request with Axios
       const response = await axios.post(
-        "http://localhost/wallet/wallet-server/user/v1/update.php",
+        `${backendUrl}/update.php`,
         { name, email, phoneNumber, dob },
         {
           headers: {

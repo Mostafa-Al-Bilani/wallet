@@ -247,6 +247,22 @@ nav li button:hover, nav li button.clicked {
 .box img{
   width: 80px;
 }
+
+/* toast */
+.toast{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  background-color: rgb(14, 211, 178);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
 /* table */
 table {
   width: 100%;

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         // Send request with Axios
         const response = await axios.post(
-          "http://localhost/wallet/wallet-server/user/v1/withdraw.php",
+          `${backendUrl}/withdraw.php"`,
           { amount },
           {
             headers: {

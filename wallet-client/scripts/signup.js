@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         // Send request with Axios
         const response = await axios.post(
-          "http://localhost/wallet/wallet-server/user/v1/signup.php",
+          `${backendUrl}/signup.php"`,
           {name, email, phoneNumber, dob, password },
           { headers: { "Content-Type": "application/json" } }
         );

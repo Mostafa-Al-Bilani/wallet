@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       // Send request with Axios
       const response = await axios.post(
-        "http://localhost/wallet/wallet-server/user/v1/deposit.php",
+        `${backendUrl}/deposit.php`,
         { amount },
         {
           headers: {
@@ -28,17 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${amount}</td>
         <td>deposit</td>
         <td>${formattedTime}</td>
+        <td>${formattedTime}</td>
         </tr>`;
         document.getElementById("transactions-body").innerHTML += html;
         document.getElementById("modal-deposit").classList.remove("active");
-      } else {
-        alert(response.data.message);
       }
+      toast(response.data.message);
     } catch (error) {
-      console.error(error);
-      alert(
-        "Error: " + (error.response?.data?.message || "Something went wrong")
-      );
+      toast("Error: " + (error.response?.data?.message || "Something went wrong"));
     }
   });
 });
