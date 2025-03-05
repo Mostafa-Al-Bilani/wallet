@@ -18,6 +18,14 @@ if (isset($data["amount"])) {
     $userid = $authArray['user_id'];
     
     $transaction = new transaction($userid, $amount, "withdraw");
+    $canWithdraw = $transaction->checkAmount($mysqli, $amount);
+    if(!$canWithdraw){
+        echo json_encode([
+            "status" => "error",
+            "message" => "not enough balance",
+        ]);
+        die;
+    }
     $response = $transaction->insert($mysqli);
 
     echo $response;

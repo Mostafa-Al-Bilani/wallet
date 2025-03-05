@@ -64,5 +64,19 @@ class Transaction
         $query->execute();
         return;
     }
-    
+    function checkAmount($mysqli, $amount){
+        $query = $mysqli->prepare("SELECT COALESCE(SUM(CASE WHEN description = 'deposit' THEN amount ELSE 0 END), 0) -
+        COALESCE(SUM(CASE WHEN description = 'withdraw' THEN amount ELSE 0 END), 0)
+        AS balance FROM transactions;");
+        $query->execute();
+        $res = $query->get_result();
+        $balance = $res->fetch_assoc();
+        $balance = $balance["balance"];
+        $remainder = $balance - $amount;
+        if($remainder < 0){
+            return false;
+        }
+        return true;
+
+    }
 }
