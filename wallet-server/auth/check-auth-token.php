@@ -1,6 +1,10 @@
 <?php
 
-require_once __DIR__ . '../vendor/autoload.php';
+<<<<<<< HEAD
+require_once __DIR__ . '/../vendor/autoload.php';
+=======
+require_once __DIR__. '/../vendor/autoload.php';
+>>>>>>> 0f29cd464a5578ecb791f004e43411ea35cb9f96
 
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;

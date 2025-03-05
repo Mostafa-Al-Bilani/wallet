@@ -27,6 +27,7 @@
       </li>
     </nav>
     <div class="content bg-black">
+      <button class="logout" id="logout">logout</button>
       <div class="page" id="page-dashboard">
         <div class="flex column gap20">
           <h2>Dashboard</h2>
@@ -61,27 +62,31 @@
         </div>
       </div>
       <div class="page hidden" id="page-transactions">
-        <table id="transactions-table">
+        <div class="height-screen60 overflow-y-auto"><table id="transactions-table" class="full-width">
           <thead>
             <tr>
               <th>amount</th>
               <th>description</th>
               <th>createdat</th>
-              <th>updatedat</th>
             </tr>
           </thead>
           <tbody id="transactions-body"></tbody>
-        </table>
+        </table></div>
+        
         <div class="flex center gap10">
           <button class="filled-btn open-modal" id="open-withdraw">
             withdraw
           </button>
           <button class="filled-btn open-modal" id="open-deposit">
             deposit
-          </button>
+          <!-- </button>
           <button class="filled-btn open-modal" id="open-payment">
             send payment
+<<<<<<< HEAD
+          </button> -->
+=======
           </button>
+>>>>>>> 0f29cd464a5578ecb791f004e43411ea35cb9f96
         </div>
           <!-----------------------------------------withdraw modal------------------------------  -->
           <div id="modal-withdraw" class="modal">
@@ -109,11 +114,26 @@
               </div>
            </div>
           <!-----------------------------------------payment modal------------------------------  -->
-          <div id="modal-payment" class="modal"></div> 
-        </div>
-      </div>
+          <!-- <div id="modal-payment" class="modal"></div>  -->
       <div class="page hidden" id="page-QR">QR</div>
-      <div class="page hidden" id="page-profile">profile</div>
+      <!---------------------------------------------profile update------------------------- -->
+      <div class="page hidden max-width-300" id="page-profile">
+        <form class="flex column gap10 full-width" id="profileForm">
+          <div>
+              <input type="text" placeholder="Enter your name" id="name" required />
+            </div>
+            <div>
+              <input type="email" placeholder="Enter your email" id="email" required />
+            </div>
+        <div>
+          <input type="text" placeholder="Enter your phone" id="phoneNumber" required/>
+        </div>
+        <div>
+          <input type="date" placeholder="Enter your date of birth" id="dob" required />
+        </div>
+        <button class="filled-btn">update</button>
+      </form>
+      </div>
       <div class="page hidden" id="page-help">help</div>
     </div>
     <script src="./scripts/auth-route.js"></script>
@@ -122,5 +142,11 @@
     <script src="./scripts/axios.min.js"></script>
     <script src="./scripts/transactions/get-transaction.js"></script>
     <script src="./scripts/transactions/deposit.js"></script>
+    <script src="./scripts/transactions/withdraw.js"></script>
+<<<<<<< HEAD
+    <script src="./scripts/logout.js"></script>
+    <script src="./scripts/update-form.js"></script>
+=======
+>>>>>>> 0f29cd464a5578ecb791f004e43411ea35cb9f96
   </body>
 </html>

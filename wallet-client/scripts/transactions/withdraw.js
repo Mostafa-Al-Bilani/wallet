@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const token = localStorage.getItem("token");
-    const depositeForm = document.getElementById("depositForm");
+    const withdrawForm = document.getElementById("withdrawForm");
   
-    depositeForm.addEventListener("submit", async function (event) {
+    withdrawForm.addEventListener("submit", async function (event) {
       event.preventDefault();
   
       // Get input values
-      const amount = document.getElementById("deposite-amount").value;
+      const amount = document.getElementById("withdraw-amount").value;
   
       try {
         // Send request with Axios
         const response = await axios.post(
-          "http://localhost/wallet/wallet-server/user/v1/deposit.php",
+          "http://localhost/wallet/wallet-server/user/v1/withdraw.php",
           { amount },
           {
             headers: {
@@ -26,12 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
           const formattedTime = now.toISOString().slice(0, 19).replace("T", " ");
           let html = `<tr>
           <td>${amount}</td>
-          <td>deposit</td>
+          <td>withdraw</td>
           <td>${formattedTime}</td>
+<<<<<<< HEAD
+=======
           <td>${formattedTime}</td>
+>>>>>>> 0f29cd464a5578ecb791f004e43411ea35cb9f96
           </tr>`;
           document.getElementById("transactions-body").innerHTML += html;
-          document.getElementById("modal-deposit").classList.remove("active");
+          document.getElementById("modal-withdraw").classList.remove("active");
         } else {
           alert(response.data.message);
         }
@@ -42,4 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
         );
       }
     });
+<<<<<<< HEAD
   });
+  
+=======
+  });
+>>>>>>> 0f29cd464a5578ecb791f004e43411ea35cb9f96

@@ -7,7 +7,6 @@ class Transaction
     public $amount;
     public $description;
     public $createdat;
-    public $updatedat;
     private $table = "transactions";
 
     function __construct($userId="", $amount="", $description="")
@@ -37,7 +36,11 @@ class Transaction
     }
     function select($mysqli, $id)
     {
+<<<<<<< HEAD
+        $query = $mysqli->prepare("SELECT * FROM $this->table where userId = ?");
+=======
         $query = $mysqli->prepare("SELECT * FROM $this->table where id = ?");
+>>>>>>> 0f29cd464a5578ecb791f004e43411ea35cb9f96
         $query->bind_param("i",  $id);
         $query->execute();
         $array = $query->get_result();

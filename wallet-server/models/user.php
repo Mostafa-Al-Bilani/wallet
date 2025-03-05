@@ -58,8 +58,19 @@ class User
     {
         $query = $mysqli->prepare("UPDATE users SET `name` = ?, `email` = ?, `phoneNumber` = ?, `dob`= ? WHERE id = ?");
         $query->bind_param("ssssi",  $this->name, $this->email, $this->phoneNumber, $this->dob, $id);
-        $query->execute();
-        return;
+        if ($query->execute()) {
+            return json_encode([
+                "status" => "success",
+                "message" => "User updated successfully",
+                "user_id" => $id 
+            ]);
+        } else {
+            return json_encode([
+                "status" => "error",
+                "message" => "Failed to update user",
+                "error" => $query->error 
+            ]);
+        }
     }
     function delete($mysqli, $id)
     {
@@ -83,6 +94,7 @@ class User
                 "status" => "success",
                 "message" => "Login successful",
                 "token" => $token,
+                "user" => $user
             ]);
         }
         return json_encode(["status" => "error", "message" => "Invalid credentials"]);

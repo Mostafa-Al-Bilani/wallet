@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
   
         if (response.data.status === "success") {
           localStorage.setItem("token", response.data.token);
+          localStorage.setItem("name", response.data.user.name);
+          localStorage.setItem("dob", response.data.user.dob);
+          localStorage.setItem("email", response.data.user.email);
+          localStorage.setItem("phoneNumber", response.data.user.phoneNumber);
           window.location.href = "./app.html";  
         }
         else{
