@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="page hidden" id="page-transactions">
-        <table id="transactions-table">
+        <div class="height-screen60 overflow-y-auto"><table id="transactions-table" class="full-width">
           <thead>
             <tr>
               <th>amount</th>
@@ -71,17 +71,18 @@
             </tr>
           </thead>
           <tbody id="transactions-body"></tbody>
-        </table>
+        </table></div>
+        
         <div class="flex center gap10">
           <button class="filled-btn open-modal" id="open-withdraw">
             withdraw
           </button>
           <button class="filled-btn open-modal" id="open-deposit">
             deposit
-          </button>
+          <!-- </button>
           <button class="filled-btn open-modal" id="open-payment">
             send payment
-          </button>
+          </button> -->
         </div>
           <!-----------------------------------------withdraw modal------------------------------  -->
           <div id="modal-withdraw" class="modal">
@@ -109,9 +110,10 @@
               </div>
            </div>
           <!-----------------------------------------payment modal------------------------------  -->
-          <div id="modal-payment" class="modal"></div> 
+          <!-- <div id="modal-payment" class="modal"></div>  -->
       <div class="page hidden" id="page-QR">QR</div>
-      <div class="page hidden" id="page-profile">
+      <!---------------------------------------------profile update------------------------- -->
+      <div class="page hidden max-width-300" id="page-profile">
         <form class="flex column gap10 full-width" id="profileForm">
           <div>
               <input type="text" placeholder="Enter your name" id="name" required />
