@@ -28,10 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <td>${amount}</td>
           <td>withdraw</td>
           <td>${formattedTime}</td>
-<<<<<<< HEAD
-=======
-          <td>${formattedTime}</td>
->>>>>>> 0f29cd464a5578ecb791f004e43411ea35cb9f96
           </tr>`;
           document.getElementById("transactions-body").innerHTML += html;
           document.getElementById("modal-withdraw").classList.remove("active");
@@ -45,9 +41,5 @@ document.addEventListener("DOMContentLoaded", function () {
         );
       }
     });
-<<<<<<< HEAD
   });
   
-=======
-  });
->>>>>>> 0f29cd464a5578ecb791f004e43411ea35cb9f96

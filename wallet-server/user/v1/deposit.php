@@ -25,8 +25,4 @@ if (isset($data["amount"])) {
 } else {
     echo json_encode(["message" => "Invalid request"]);
 }
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 0f29cd464a5578ecb791f004e43411ea35cb9f96
